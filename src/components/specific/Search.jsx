@@ -33,7 +33,7 @@ const Search = () => {
 
   const [users, setUsers] = useState([]);
 
-  const currentUser = useSelector((state) => state.auth);
+  const currentUser = useSelector((state) => state.auth.user);
 
   const addFriendHandler = async (id) => {
     await sendFriendRequest("Sending friend request...", { userId: id });
